@@ -1,0 +1,11 @@
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@for $index from 1 through 12 {
+  .col-#{$index} {
+    width: 100% / 12 * $index;
+    padding: 0 15px;
+  }
+}

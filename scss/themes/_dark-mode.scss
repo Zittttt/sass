@@ -1,0 +1,53 @@
+.dark-mode {
+  header {
+    background-color: #353536;
+    box-shadow: none;
+    nav {
+      a {
+        color: white;
+      }
+    }
+  }
+
+  .carousel {
+    background-image: url("../../image/product-header-bg-dark.jpg");
+    .container {
+      .detail {
+        p {
+          color: white;
+        }
+        h5 {
+          color: $primary-color;
+        }
+      }
+    }
+  }
+
+  .products {
+    background-color: #121212;
+    .container {
+      h1 {
+        color: $primary-color;
+      }
+    }
+    .card {
+      box-shadow: none;
+      background-color: #212121;
+      .image-wrapper {
+        box-shadow: none;
+      }
+      .name-price {
+        color: $primary-color;
+      }
+      .description {
+        color: $primary-color;
+      }
+      .ratting-action {
+        button {
+          box-shadow: none;
+          border: 1px solid $primary-color;
+        }
+      }
+    }
+  }
+}

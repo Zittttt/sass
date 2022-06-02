@@ -1,0 +1,67 @@
+.products {
+  background-color: $secondary-color;
+  padding: 60px 0;
+  .container {
+    @include container;
+    h1 {
+      text-align: center;
+      @include text($default-color, $fw-semi-bold, $text-xxl);
+      margin-bottom: 40px;
+    }
+    .card {
+      margin-bottom: 30px;
+      padding: 20px;
+      box-shadow: 6px 6px 12px #e2ebfc, -6px -6px 12px #fff;
+
+      .image-wrapper {
+        box-shadow: 6px 6px 12px #e2ebfc, -6px -6px 12px #fff;
+      }
+
+      .name-price {
+        @include flex-between-center;
+        margin-top: 30px;
+        p {
+          @include text($default-color, $fw-bold);
+        }
+      }
+
+      .description {
+        @include text($default-color, $fw-normal, $text-md);
+        margin-bottom: 20px;
+      }
+
+      .ratting-action {
+        @include flex-between-center;
+        i {
+          color: $rating-color;
+          @for $var from 1 to 5 {
+            &.star-#{$var} {
+              @if $var % 2==0 {
+                font-size: 30px;
+                color: red;
+              }
+            }
+          }
+          @each $item in facebook tiktok google {
+            &.fa-#{$item} {
+              @if $item == facebook {
+                color: blue;
+              } @else if $item == tiktok {
+                color: black;
+              } @else {
+                color: red;
+              }
+            }
+          }
+        }
+        button {
+          box-shadow: 6px 6px 12px #e2ebfc, -6px -6px 12px #fff;
+          border: none;
+          background: transparent;
+          padding: 10px 15px;
+          color: $primary-color;
+        }
+      }
+    }
+  }
+}

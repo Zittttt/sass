@@ -1,0 +1,16 @@
+@mixin container {
+  width: 75%;
+  margin: 0 auto;
+}
+
+@mixin flex-between-center {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin text($c: $default-color, $fw: $fw-normal, $fs: $text-base) {
+  color: $c;
+  font-weight: $fw;
+  font-size: $fs;
+}
